@@ -7,7 +7,7 @@ public class TakeItemAction extends PlayerAction
 {
 
 	@Override
-	public void executeAction( Player player, Room room )
+	public void executeAction( Player player, Room room, int grantedBonus  )
 	{
 		// TODO Auto-generated method stub
 

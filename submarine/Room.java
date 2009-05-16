@@ -1,21 +1,67 @@
 package submarine;
+import submarine.Hatch;
 
 import java.util.List;
+import java.util.Vector;
 
+import actions.ExtinguishFireAction;
+import actions.FixMachineAction;
+import actions.KillKrakenAction;
+import actions.PlayerAction;
+import actions.PumpWaterAction;
+import actions.TakeGrogAction;
+import actions.TakeItemAction;
 
-public class Room
+public abstract class Room
 {
-	private boolean isOnFire;
-	private int actionPointCosts;
 	private List<Hatch> adjacentHatches;
-	private boolean isUnderWater;
 	
+	protected boolean isOnFire;
+
+	protected boolean isOnHalfWater;
+
+	protected boolean isOnFullWater;
+
+	protected boolean isOutside;
+
+	protected boolean hasMachine;
+
+	protected boolean hasGrog;
+
+	protected boolean hasItems;
+
+	protected boolean hasMissileMenace;
+
+	protected boolean hasOxygenMenace;
+
+	protected boolean hasEngineMenace;
+
+	protected boolean hasKrakenMenace;
+	
+	protected boolean isSeaRoom;
+
 	public Room()
 	{
 		this.isOnFire = false;
-		this.actionPointCosts = 0;
+		this.isOnHalfWater = false;
+		this.isOnFullWater = false;
+		this.hasGrog = false;
+		this.hasItems = false;
+		this.isOutside = false;
+		this.hasMachine = false;
+		this.isSeaRoom = false;
+		
+		this.hasKrakenMenace = false;
+		this.hasMissileMenace = false;
+		this.hasOxygenMenace = false;
+		this.hasEngineMenace = false;
 	}
-	
+
+	public boolean isSeaRoom()
+	{
+		return this.isSeaRoom;
+	}
+
 	public List<Hatch> getAdjacentHatches()
 	{
 		return this.adjacentHatches;
@@ -25,25 +71,78 @@ public class Room
 	{
 		this.adjacentHatches.add( hatch );
 	}
-
-	public int getActionPointCosts()
+	
+	public Vector<PlayerAction> getAllowedActions()
 	{
-		return this.actionPointCosts;
+		Vector<PlayerAction> allowedActions = new Vector<PlayerAction>();
+
+		if ( this.isOnFire() )
+		{
+			allowedActions.addElement( new ExtinguishFireAction() );
+			return allowedActions;
+		}
+
+		if ( this.isOnWater() )
+		{
+			allowedActions.addElement( new PumpWaterAction() );
+		}
+
+		if ( this.hasMachine() )
+		{
+			allowedActions.addElement( new FixMachineAction() );
+		}
+
+		if ( this.isOutside() )
+		{
+			allowedActions.addElement( new KillKrakenAction() );
+		}
+
+		if ( this.hasGrog() )
+		{
+			allowedActions.addElement( new TakeGrogAction() );
+		}
+
+		if ( this.hasItems() )
+		{
+			allowedActions.addElement( new TakeItemAction() );
+		}
+
+		return allowedActions;
 	}
 
-	public void setActionPointCosts( int actionPointCosts )
+	public boolean hasEngineMenace()
 	{
-		this.actionPointCosts = actionPointCosts;
+		return this.hasEngineMenace;
 	}
 
-	public boolean isUnderWater()
+	public boolean hasGrog()
 	{
-		return this.isUnderWater;
+		return this.hasGrog;
 	}
-	public void setUnderWater( boolean isUnderWater )
+
+	public boolean hasItems()
 	{
-		this.isUnderWater = isUnderWater;
-		this.actionPointCosts = 1;
+		return this.hasItems;
+	}
+
+	public boolean hasKrakenMenace()
+	{
+		return this.hasKrakenMenace;
+	}
+
+	public boolean hasMachine()
+	{
+		return this.hasMachine;
+	}
+
+	public boolean hasMissileMenace()
+	{
+		return this.hasMissileMenace;
+	}
+
+	public boolean hasOxygenMenace()
+	{
+		return this.hasOxygenMenace;
 	}
 
 	public boolean isOnFire()
@@ -51,19 +150,23 @@ public class Room
 		return this.isOnFire;
 	}
 
-	public void setOnFire( boolean isOnFire )
+	public boolean isOnFullWater()
 	{
-		//costs too high for the traversal algorithm to take it into account
-		this.actionPointCosts = 1000;
-		this.isOnFire = isOnFire;
+		return this.isOnFullWater;
 	}
 
-	public void blockHatchToRoom( Room room )
+	public boolean isOnHalfWater()
 	{
+		return this.isOnHalfWater;
 	}
 
-	public boolean isSeaLocation()
+	public boolean isOnWater()
 	{
-		return false;
+		return ( this.isOnHalfWater || this.isOnFullWater );
+	}
+
+	public boolean isOutside()
+	{
+		return this.isOutside;
 	}
 }

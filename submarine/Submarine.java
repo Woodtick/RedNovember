@@ -26,22 +26,16 @@ public class Submarine
 	private Room room4;
 
 	private Hatch No1;
-
 	private Hatch No2;
-
 	private Hatch No3;
-
 	private Hatch No4;
-
 	private Hatch No5;
 	private Hatch No6;
 	private Hatch No7;
-
 	private Hatch No8;
 	private Hatch No9;
 	private Hatch No10;
 	private Hatch No11;
-
 	private Hatch No12;
 	private Hatch No13;
 	private Hatch No14;
@@ -145,10 +139,10 @@ public class Submarine
 		this.captainsCabin = new CaptainsCabin();
 		this.sea = new Sea();
 
-		this.room1 = new Room();
-		this.room2 = new Room();
-		this.room3 = new Room();
-		this.room4 = new Room();
+		this.room1 = new NormalRoom();
+		this.room2 = new NormalRoom();
+		this.room3 = new NormalRoom();
+		this.room4 = new NormalRoom();
 
 		this.No1 = new Hatch();
 		this.No2 = new Hatch();

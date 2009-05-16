@@ -1,3 +1,5 @@
+import submarine.Room;
+
 public class PowerRoom extends Room
 {
 	public PowerRoom()

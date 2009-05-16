@@ -7,11 +7,10 @@ import utillities.ItemIdentifier;
 
 public class Player
 {
-
 	protected Room currentRoom;
 	private String gnomeName;
 	protected Rucksack rucksack;
-	protected TimeKeeper timeKeeper;
+	protected int time;
 	private int intoxicationLevel;
 	private boolean immuneToFire;
 
@@ -56,33 +55,14 @@ public class Player
 		return this.rucksack;
 	}
 
-	public TimeKeeper getTimeKeeper()
+	public int getTime()
 	{
-		return this.timeKeeper;
+		return this.time;
 	}
 	
 	public boolean isImmuneToFire()
 	{
 		return this.immuneToFire;
-	}
-
-	public void move( Room toLocation )
-	{
-		if ( toLocation.isSeaLocation() && this.rucksack.containsItem( ItemIdentifier.AQUALUNG ) )
-		{
-			// ask gamelogic ok
-		}
-	
-		else if ( toLocation.isSeaLocation() && !this.rucksack.containsItem( ItemIdentifier.AQUALUNG ) )
-		{
-			// nicht ok
-		}
-	
-		// Raum
-		else
-		{
-	
-		}
 	}
 
 	public void setImmuneToFire( boolean immuneToFire )
@@ -100,9 +80,9 @@ public class Player
 		this.rucksack = rucksack;
 	}
 
-	public void setTimeKeeper( TimeKeeper timeKeeper )
+	public void setTime( int time )
 	{
-		this.timeKeeper = timeKeeper;
+		this.time = time;
 	}
 
 	public boolean useItem( Item usedItem )
