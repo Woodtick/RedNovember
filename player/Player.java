@@ -11,6 +11,7 @@ public class Player
 	private String gnomeName;
 	protected Rucksack rucksack;
 	protected int time;
+	private int turnID;
 	private int intoxicationLevel;
 	private boolean immuneToFire;
 
@@ -18,6 +19,18 @@ public class Player
 	{
 		super();
 	}
+
+
+	public int getTurnID()
+	{
+		return this.turnID;
+	}
+	
+	public void setTurnID( int turnID )
+	{
+		this.turnID = turnID;
+	}
+
 
 	public void drinkGrog( Item grog )
 	{

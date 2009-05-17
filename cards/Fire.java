@@ -1,20 +1,19 @@
 package cards;
 
 import player.Player;
-import server.GameManager;
 import utillities.EventCardIdentifier;
-import utillities.ImageArchive;
 
 public class Fire extends EventCard
 {
-	public Fire( int faintValue )
+	public Fire(int faintValue)
 	{
 		this.setFaintValue( faintValue );
-		this.setDescription( "A fire starts in a random room");
+		this.setDescription( "A fire starts in a random room" );
 		this.setName( "Fire" );
-		this.setIdentifier( EventCardIdentifier.FIRE);
+		this.setIdentifier( EventCardIdentifier.FIRE );
 	}
-	
+
+	@Override
 	public void evaluateConsequences()
 	{
 
@@ -23,11 +22,11 @@ public class Fire extends EventCard
 	@Override
 	public boolean gnomeFaints( Player gnome )
 	{
-		if( this.getFaintValue() == 0 )
+		if ( this.getFaintValue() == 0 )
 			return false;
-		else if( gnome.getIntoxicationLevel() >= this.getFaintValue() )
+		else if ( gnome.getIntoxicationLevel() >= this.getFaintValue() )
 			return true;
-		
+
 		return false;
 	}
 }

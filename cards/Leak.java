@@ -2,30 +2,30 @@ package cards;
 
 import player.Player;
 import utillities.EventCardIdentifier;
-import utillities.ImageArchive;
 
 public class Leak extends EventCard
 {
 
-	public Leak( int faintValue )
+	public Leak(int faintValue)
 	{
 		this.setFaintValue( faintValue );
-		this.setDescription("A random room is flooded to high water");
+		this.setDescription( "A random room is flooded to high water" );
 		this.setName( "Leak" );
-		this.setIdentifier( EventCardIdentifier.LEAK);
+		this.setIdentifier( EventCardIdentifier.LEAK );
 	}
-		
+
+	@Override
 	public void evaluateConsequences()
 	{
-		//flood a room (hight water token)
+		// flood a room (hight water token)
 	}
 
 	@Override
 	public boolean gnomeFaints( Player gnome )
 	{
-		if( gnome.getIntoxicationLevel() >= this.getFaintValue() )
+		if ( gnome.getIntoxicationLevel() >= this.getFaintValue() )
 			return true;
-		
+
 		return false;
 	}
 }

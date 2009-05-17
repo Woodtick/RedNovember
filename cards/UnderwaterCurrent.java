@@ -8,9 +8,9 @@ public class UnderwaterCurrent extends EventCard
 	public UnderwaterCurrent(int faintValue)
 	{
 		this.setFaintValue( faintValue );
-		this.setDescription( "Increase all low water tokens to high water");
-		this.setName( "Underwater Current");
-		this.setIdentifier( EventCardIdentifier.UNDERWATER_CURRENT);
+		this.setDescription( "Increase all low water tokens to high water" );
+		this.setName( "Underwater Current" );
+		this.setIdentifier( EventCardIdentifier.UNDERWATER_CURRENT );
 	}
 
 	@Override
@@ -22,9 +22,9 @@ public class UnderwaterCurrent extends EventCard
 	@Override
 	public boolean gnomeFaints( Player gnome )
 	{
-		if( gnome.getIntoxicationLevel() >= this.getFaintValue() )
+		if ( gnome.getIntoxicationLevel() >= this.getFaintValue() )
 			return true;
-		
+
 		return false;
 	}
 }

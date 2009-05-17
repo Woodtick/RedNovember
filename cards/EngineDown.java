@@ -2,7 +2,6 @@ package cards;
 
 import player.Player;
 import utillities.EventCardIdentifier;
-import utillities.ImageArchive;
 
 public class EngineDown extends EventCard
 {
@@ -24,9 +23,9 @@ public class EngineDown extends EventCard
 	@Override
 	public boolean gnomeFaints( Player gnome )
 	{
-		if( gnome.getIntoxicationLevel() >= this.getFaintValue() )
+		if ( gnome.getIntoxicationLevel() >= this.getFaintValue() )
 			return true;
-		
+
 		return false;
 	}
 }
