@@ -25,7 +25,9 @@ public class Fire extends EventCard
 	@Override
 	public boolean gnomeFaints( Player gnome )
 	{
-		if( gnome.getIntoxicationLevel() >= this.getFaintValue() )
+		if( this.getFaintValue() == 0 )
+			return false;
+		else if( gnome.getIntoxicationLevel() >= this.getFaintValue() )
 			return true;
 		
 		return false;
