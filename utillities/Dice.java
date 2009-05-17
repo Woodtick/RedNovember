@@ -4,20 +4,15 @@ import java.util.Random;
 
 public class Dice
 {	
-	private byte roll;
-	private Random random;
+	private static byte roll;
+	private static Random random;
 	
-	public Dice()
+	public static byte getRoll()
 	{
-		random = new Random();
-	}
-	
-	public byte getRoll()
-	{
-		return this.roll;
+		return roll;
 	}
 
-	public int rollDice()
+	public static byte rollDice()
 	{
 		roll = (byte) ( ( Math.abs(random.nextInt()) % 10 ) + 1 );
 		return roll;

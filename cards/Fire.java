@@ -1,6 +1,8 @@
 package cards;
 
 import player.Player;
+import server.GameManager;
+import utillities.Dice;
 import utillities.EventCardIdentifier;
 import utillities.ImageArchive;
 
@@ -17,7 +19,7 @@ public class Fire extends EventCard
 	
 	public void evaluateConsequences()
 	{
-		//start random fire
+		GameManager.evaluateEvent();
 	}
 
 	@Override
