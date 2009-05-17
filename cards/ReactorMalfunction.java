@@ -12,7 +12,6 @@ public class ReactorMalfunction extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Advance the heat track by +2");
 		this.setName("Reactor Malfunction");
-		this.setImage( ImageArchive.REACTOR_MALFUNCTION_EVENT);
 		this.setIdentifier( EventCardIdentifier.REACTOR_MALFUNCTION);
 	}
 

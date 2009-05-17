@@ -12,7 +12,6 @@ public class ReactorWarmup extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Advance the heat track by +1");
 		this.setName("Reactor Warmup");
-		this.setImage(ImageArchive.REACTOR_WARMUP_EVENT);
 		this.setIdentifier( EventCardIdentifier.REACTOR_WARMUP);
 	}
 	

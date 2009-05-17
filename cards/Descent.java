@@ -12,7 +12,6 @@ public class Descent extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Advance the pressure track by 1");
 		this.setName( "Descent");
-		this.setImage( ImageArchive.DESCENT_EVENT );
 		this.setIdentifier( EventCardIdentifier.DESCENT);
 	}
 	

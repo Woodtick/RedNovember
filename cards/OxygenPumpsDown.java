@@ -12,7 +12,6 @@ public class OxygenPumpsDown extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Timed Event. Place the Asphyxiated! Destruction Token at +10");
 		this.setName( "Oxygen Pumps Down");
-		this.setImage( ImageArchive.OXYGENPUMPS_EVENT);
 		this.setIdentifier( EventCardIdentifier.OXYGEN_PUMPS_DOWN);
 	}
 	

@@ -12,7 +12,6 @@ public class Stumble extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription("The active player discards down to 1 item tile");
 		this.setName("Stumble");
-		this.setImage( ImageArchive.STUMBLE_EVENT);
 		this.setIdentifier( EventCardIdentifier.STUMBLE);
 	}
 	

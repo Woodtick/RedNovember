@@ -12,7 +12,6 @@ public class Kraken extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Timed Event. Place the Kraken! Destruction Token at +15. Hand limit 4");
 		this.setName( "Kraken");
-		this.setImage( ImageArchive.KRAKEN_EVENT);
 		this.setIdentifier( EventCardIdentifier.KRAKEN);
 	}
 	

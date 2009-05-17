@@ -12,7 +12,6 @@ public class Overheated extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "All players must play a grog tile if possible. Increase intoxication.");
 		this.setName("Overheated");
-		this.setImage( ImageArchive.OVERHEATED_EVENT);
 		this.setIdentifier( EventCardIdentifier.OVERHEATED);
 	}
 	

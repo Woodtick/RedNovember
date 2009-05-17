@@ -2,7 +2,6 @@ package cards;
 
 import player.Player;
 import utillities.EventCardIdentifier;
-import utillities.ImageArchive;
 
 public class UnderwaterCurrent extends EventCard
 {
@@ -11,7 +10,6 @@ public class UnderwaterCurrent extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Increase all low water tokens to high water");
 		this.setName( "Underwater Current");
-		this.setImage(ImageArchive.UNDERWATER_CURRENT_EVENT);
 		this.setIdentifier( EventCardIdentifier.UNDERWATER_CURRENT);
 	}
 

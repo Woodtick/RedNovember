@@ -11,7 +11,6 @@ public class FastDescent extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Advance the pressure track by 2" );
 		this.setName( "Fast Descent");
-		this.setImage( ImageArchive.FAST_DESCENT_EVENT);
 		this.setIdentifier(EventCardIdentifier.FAST_DESCENT);
 	}
 	

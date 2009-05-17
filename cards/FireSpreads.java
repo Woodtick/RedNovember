@@ -11,7 +11,6 @@ public class FireSpreads extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "A fire starts in a room next to one on fire");
 		this.setName( "Fire spreads");
-		this.setImage( ImageArchive.FIRE_SPREADS_EVENT );
 		this.setIdentifier( EventCardIdentifier.FIRE_SPREADS);
 	}
 	

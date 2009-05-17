@@ -12,7 +12,6 @@ public class Leak extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription("A random room is flooded to high water");
 		this.setName( "Leak" );
-		this.setImage( ImageArchive.LEAK_EVENT);
 		this.setIdentifier( EventCardIdentifier.LEAK);
 	}
 		

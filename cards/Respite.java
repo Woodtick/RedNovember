@@ -11,7 +11,6 @@ public class Respite extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Nothing happens" );
 		this.setName( "Respite");
-		this.setImage( ImageArchive.RESPITE_COUNTDOWN_EVENT);
 		this.setIdentifier( EventCardIdentifier.RESPITE);
 	}
 	

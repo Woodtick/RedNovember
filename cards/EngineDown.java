@@ -12,7 +12,6 @@ public class EngineDown extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Timed Event! Place the Crushed! Destruction Token at +10" );
 		this.setName( "Engine Down" );
-		this.setImage( ImageArchive.ENGINE_DOWN_EVENT );
 		this.setIdentifier( EventCardIdentifier.ENGINE_DOWN );
 	}
 

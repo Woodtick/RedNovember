@@ -12,7 +12,6 @@ public class MissileCountdown extends EventCard
 		this.setFaintValue( faintValue );
 		this.setDescription( "Timed Event. Place the Missile Countdown! Destruction Token at +10");
 		this.setName( "Missile Countdown");
-		this.setImage( ImageArchive.MISSILE_COUNTDOWN_EVENT);
 		this.setIdentifier( EventCardIdentifier.MISSILE_COUNTDOWN);
 	}
 	

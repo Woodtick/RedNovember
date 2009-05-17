@@ -10,7 +10,6 @@ public abstract class EventCard
 	private String description;
 	private int faintValue;
 	private int identifier;
-	private Image image;
 	
 	public void setName( String name )
 	{
@@ -32,11 +31,6 @@ public abstract class EventCard
 		this.identifier = identifier;
 	}
 
-	public void setImage( Image image )
-	{
-		this.image = image;
-	}
-
 	public String getName()
 	{
 		return this.name;
@@ -55,11 +49,6 @@ public abstract class EventCard
 	public int getIdentifier()
 	{
 		return this.identifier;
-	}
-
-	public Image getImage()
-	{
-		return this.image;
 	}
 
 	//evaluate consequences followed by this card
